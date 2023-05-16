@@ -1,0 +1,14 @@
+{
+  "name": "dungeonchars",
+  "version": "1.0.0",
+  "description": "Chars of Danilo's table with their descriptions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wesley Moraes",
+  "license": "ISC",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

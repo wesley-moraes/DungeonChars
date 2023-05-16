@@ -1,0 +1,22 @@
+$path-font: "/fonts/";
+
+@font-face {
+    font-family: longa-iberica;
+    src: url("#{$path-font}/LongaIberica.ttf");
+}
+
+@font-face {
+    font-family: dungeon-sn;
+    src: url("#{$path-font}/Dungeon_Sn.ttf");
+}
+
+@font-face {
+    font-family: westbourne-serif-regular;
+    src: url("#{$path-font}/Westbourne_Serif_Regular.otf");
+}
+
+@font-face {
+    font-family: westbourne-serif-italic;
+    src: url("#{$path-font}/Westbourne_Serif_Italic.otf");
+}
+

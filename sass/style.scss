@@ -1,0 +1,226 @@
+/*Principais arquivos*/
+@use 'reset';
+@use 'fonts';
+
+.fstPage{
+    float: left;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/img/fst-page-bg-giphy.gif");
+    background-repeat: repeat;
+
+}
+
+@mixin transitionSpanColor{
+    transition: .3s;
+    
+}
+
+@mixin prefix($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+   
+    // Output standard non-prefixed declaration
+    #{$property}: $value;
+}
+
+.cloudColor{
+    color:#a2c7bb;
+    @include transitionSpanColor;
+
+    &:hover{
+        color: #5ca18c;
+        @include transitionSpanColor;
+    }
+}
+
+.fireColor{
+    color: #ac0d0d;
+    @include transitionSpanColor;
+
+    &:hover{
+        color: #7e3131;
+        @include transitionSpanColor;
+    }
+}
+
+.hillColor{
+    color: #78bd91;
+    @include transitionSpanColor;
+
+    &:hover{
+        color: #438b5e;
+        @include transitionSpanColor;
+    }
+}
+
+.frostColor{
+    color: #4ecdc4;
+    @include transitionSpanColor();
+
+    &:hover{
+        color: #98fff8;
+        @include transitionSpanColor;
+    }
+}
+
+.stoneColor{
+    color: #bbbebd;
+    @include transitionSpanColor();
+
+    &:hover{
+        color: #75b49f;
+        @include transitionSpanColor;
+    }
+}
+
+.stormColor{
+    color: #341899;
+    @include transitionSpanColor;
+
+    &:hover{
+        color: #5b39d6;
+        @include transitionSpanColor;
+    }
+}
+
+main{
+    width: 40%;
+    height: 60vh;
+    margin: 0 auto;
+
+    // border-width: 4px;
+    // border-style: solid;
+    // border-image: rgb(2,0,36);
+    // border-radius: 8px;
+    // padding: 9px;
+
+    border: 4px solid rgb(109, 0, 109);
+    border-radius: 5px;
+    // background-image: linear-gradient(#130912, #130912) , radial-gradient(circle at top left, #0732bb, #6408a1);
+    background-image: linear-gradient(to top, rgba(9, 14, 58, 0.5), rgba(19,9,18,1));
+    // opacity: 0.8;
+
+    box-sizing: border-box;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 30px;
+
+    header{
+
+        float: left;
+        width: 100%;
+
+        div{
+
+            float: left;
+            margin: 10px;
+            margin-left: 30px;
+            margin-top: 20px;
+        
+            img{
+                max-width: 100px;
+                max-height: 100px;
+                float: left;
+                
+                border-radius: 50%;
+                border: 2px solid #fff;
+            }
+        }
+        
+        h1{
+            font-family: longa-iberica;
+            font-size: 330%;
+            color: white;
+            text-align: left;
+            margin-top: 40px;
+            margin-left: 10px;
+            float: left;
+            text-decoration: underline;
+        }
+
+    }
+
+    .content-text{
+        
+        float: left;
+        width: 80%;
+        margin: 0 auto;
+        left: 50%;
+        position: relative;
+        transform: translateX(-50%);
+        max-height: 230px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar{
+            width: 10px;
+            background-color: rgb(109, 103, 109);
+            border-radius: 30px;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: rgb(90, 3, 112);
+            border-radius: 30px;
+            border: 1px solid black;
+            -webkit-transition: opacity 1.2s ease;
+        }
+        &::-webkit-scrollbar-thumb:hover{
+            background-color: rgb(253, 182, 194);
+            -webkit-transition: opacity 1.2s ease;
+        }
+
+        div{
+            float: left;
+            border-bottom: 1px solid #fff;
+            width: 90%;
+            margin-bottom: 20px;
+            margin-right: 10px;
+            padding-left: 5px;
+            padding-bottom: 3px;
+            
+
+            a{
+                color: blue;
+                text-decoration: none;
+                font-size: 22px;
+                transition: .4s;
+                
+                &:hover{
+                    color: lightblue;
+                    transition: .4s;
+                }
+            }
+        }
+
+        p{
+            font-family: westbourne-serif-regular;
+            font-size: 20px;
+            color: #fff;
+            transition: .3s;
+
+        }
+
+        #CharsList{ 
+
+            li{
+                font-family: westbourne-serif-regular;
+                font-size: 25px;
+
+                a{
+                    color: lightblue;
+                    transition: all .5s;
+
+                    &:hover{
+                        color: rgb(60, 204, 252);
+                        transition: all .5s;
+                    }
+                }
+                
+            }
+        }
+        
+    }
+
+
+}
