@@ -86,12 +86,16 @@ body {
   src: url("../fonts/Westbourne_Serif_Italic.otf");
 }
 /*Principais arquivos*/
+body {
+  float: left;
+}
+
 .fstPage {
   float: left;
   width: 100%;
   height: 100vh;
   background-image: url("../img/fst-page-bg-giphy.gif");
-  background-repeat: repeat;
+  background-size: cover;
 }
 
 .cloudColor {
@@ -150,7 +154,7 @@ body {
 
 main {
   width: 40%;
-  height: 60vh;
+  height: 390px;
   margin: 0 auto;
   border: 4px solid rgb(109, 0, 109);
   border-radius: 5px;
