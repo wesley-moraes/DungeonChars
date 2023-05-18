@@ -71,26 +71,26 @@ body {
 
 @font-face {
   font-family: longa-iberica;
-  src: url("/fonts//LongaIberica.ttf");
+  src: url("fonts//LongaIberica.ttf");
 }
 @font-face {
   font-family: dungeon-sn;
-  src: url("/fonts//Dungeon_Sn.ttf");
+  src: url("fonts//Dungeon_Sn.ttf");
 }
 @font-face {
   font-family: westbourne-serif-regular;
-  src: url("/fonts//Westbourne_Serif_Regular.otf");
+  src: url("fonts//Westbourne_Serif_Regular.otf");
 }
 @font-face {
   font-family: westbourne-serif-italic;
-  src: url("/fonts//Westbourne_Serif_Italic.otf");
+  src: url("fonts//Westbourne_Serif_Italic.otf");
 }
 /*Principais arquivos*/
 .fstPage {
   float: left;
   width: 100%;
   height: 100vh;
-  background-image: url("/img/fst-page-bg-giphy.gif");
+  background-image: url("img/fst-page-bg-giphy.gif");
   background-repeat: repeat;
 }
 
