@@ -2,18 +2,25 @@
 @use 'reset';
 @use 'fonts';
 
+
+/*general*/
 body{
     float: left;
+    width: 100%;
 }
 
 .fstPage{
+    background-image: url("../img/fst-page-bg-giphy.gif");
+    background-size: cover;
+}
+
+.wrapper{
     float: left;
     width: 100%;
     height: 100vh;
-    background-image: url("../img/fst-page-bg-giphy.gif");
-    background-size: cover;
-
 }
+
+/*index*/
 
 @mixin transitionSpanColor{
     transition: .3s;
@@ -80,12 +87,29 @@ body{
 }
 
 .stormColor{
-    color: #341899;
+    color: #6343d8;
     @include transitionSpanColor;
 
     &:hover{
         color: #5b39d6;
         @include transitionSpanColor;
+    }
+}
+
+/*Draw*/
+
+.drawPage{
+    background-image: url("../img/draw-bg-giphy.gif");
+    background-size: cover;
+
+    main{
+        border: 4px solid #a2fa1b;
+        background-image: linear-gradient(to top, rgba(67, 209, 90, 0.233), rgb(7, 39, 14));
+        height: 500px;
+
+        .content-text{
+            overflow-y: auto;
+        }
     }
 }
 
@@ -100,7 +124,7 @@ main{
     // border-radius: 8px;
     // padding: 9px;
 
-    border: 4px solid rgb(109, 0, 109);
+    border: 4px solid #003f69;
     border-radius: 5px;
     // background-image: linear-gradient(#130912, #130912) , radial-gradient(circle at top left, #0732bb, #6408a1);
     background-image: linear-gradient(to top, rgba(9, 14, 58, 0.5), rgba(19,9,18,1));
@@ -121,7 +145,7 @@ main{
 
             float: left;
             margin: 10px;
-            margin-left: 30px;
+            margin-left: 10%;
             margin-top: 20px;
         
             img{
