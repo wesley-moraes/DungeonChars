@@ -20,6 +20,17 @@ body{
     height: 100vh;
 }
 
+
+.allPage{
+
+    .content-text{
+
+        div{
+            border-bottom: 1px solid transparent;
+        }
+    }
+}
+
 /*index*/
 
 @mixin transitionSpanColor{
@@ -109,6 +120,8 @@ body{
 
         .content-text{
             overflow-y: auto;
+            max-height: 330px;
+            border: 2px solid purple;
         }
     }
 }
@@ -198,15 +211,14 @@ main{
             -webkit-transition: opacity 1.2s ease;
         }
 
-        div{
+        >div{
             float: left;
-            border-bottom: 1px solid #fff;
             width: 90%;
             margin-bottom: 20px;
             margin-right: 10px;
             padding-left: 5px;
             padding-bottom: 3px;
-            
+            border-bottom: 1px solid #fff;
 
             a{
                 color: blue;
@@ -245,6 +257,31 @@ main{
                     }
                 }
                 
+            }
+        }
+
+        .content-list {
+
+            border-bottom: 1px solid transparent;
+            padding-right: 5px;
+
+            ul{
+
+                float: left;
+                width: 100%;
+                
+
+                li{
+                    width: 33.33%;
+                    float: left;
+                    border: 1px solid blue;
+                    padding: 15px;
+                    text-align: center;
+        
+                    &:hover{
+                        background-color: #4ecdc4;
+                    }
+                }
             }
         }
         

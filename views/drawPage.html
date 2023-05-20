@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
-    <div class="wrapper drawPage">
+<body id="drawPageId">
+    <div class="wrapper drawPage allPage">
         <main>
             <header>
                 <div>
@@ -23,13 +23,25 @@
                 </div>
                 <div class="content-list">
                     <ul>
-                        <li>atributos</li>
-                        <li>ligações</li>
-                        <li>magias favoritas!</li>
+                        <li id="li-atributes">atributos</li>
+                        <li id="li-relationship">ligações</li>
+                        <li id="li-favs-magics">magias favoritas!</li>
                     </ul>
                 </div>
-                <div class="content-info">
-                    
+                <div class="content-info-atributes">
+                    <p>Strenght: </p> <p id="atr-for"></p>
+                    <p>Dexterity: </p> <p id="atr-dex"></p>
+                    <p>Constitution: </p> <p id="atr-con"></p>
+                    <p>Inteligence: </p> <p id="atr-int"></p>
+                    <p>Wisdom: </p> <p id="atr-wis"></p>
+                    <p>Charism: </p> <p id="atr-cha"></p>
+                </div>
+
+                <div class="content-info-relationship">
+                    ligações
+                </div>
+                <div class="content-info-favorite-magics">
+                    magias favoritas!
                 </div>
                 
             </div>
