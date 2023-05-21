@@ -25,7 +25,8 @@ var mazabeleAtr = {
     int : "12",
     wis : "14",
     cha : "10"
-}
+};
+
 
 
 
@@ -42,6 +43,15 @@ function identifyObj(char){
 }
 
 document.addEventListener("DOMContentLoaded", function(){
+
+    //mensagem = () => window.alert("hello big brother");
+    //mensagem();
+    //com parametro
+    //mostrarNome = nome => window.alert("Meu nome é: " + nome);
+    //mostrarNome("Thyago");
+
+
+
     // for (const chave in chars){
     //     if (chars.hasOwnProperty(chave)) {
     //       console.log(`${chave}: ${chars[chave]}`);
