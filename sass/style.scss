@@ -275,11 +275,16 @@ main{
                     width: 33.33%;
                     float: left;
                     border: 1px solid blue;
-                    padding: 15px;
+                    padding: 5px;
                     text-align: center;
         
                     &:hover{
                         background-color: #4ecdc4;
+                    }
+
+                    i{
+                        font-size: 30px;
+                        color: #fff;
                     }
                 }
             }

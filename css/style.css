@@ -292,11 +292,15 @@ main .content-text .content-list ul li {
   width: 33.33%;
   float: left;
   border: 1px solid blue;
-  padding: 15px;
+  padding: 5px;
   text-align: center;
 }
 main .content-text .content-list ul li:hover {
   background-color: #4ecdc4;
+}
+main .content-text .content-list ul li i {
+  font-size: 30px;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

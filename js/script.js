@@ -50,8 +50,6 @@ document.addEventListener("DOMContentLoaded", function(){
     //mostrarNome = nome => window.alert("Meu nome é: " + nome);
     //mostrarNome("Thyago");
 
-
-
     // for (const chave in chars){
     //     if (chars.hasOwnProperty(chave)) {
     //       console.log(`${chave}: ${chars[chave]}`);
