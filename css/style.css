@@ -103,13 +103,29 @@ body {
   height: 100vh;
 }
 
-.allPage .content-text div {
+.allCharPages .content-text div {
   border-bottom: 1px solid transparent;
 }
-.allPage .content-text > div {
+.allCharPages .content-text > div {
   width: 100%;
   margin: 0;
   margin-bottom: 15px;
+}
+.allCharPages .content-text .content-info-atributes div {
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.allCharPages .content-text .content-info-atributes div p {
+  float: left;
+}
+.allCharPages .content-text .content-info-atributes div p:nth-child(1) {
+  font-size: 34px;
+}
+.allCharPages .content-text .content-info-atributes div p:nth-child(2) {
+  color: #fff;
+  font-size: 50px;
+  margin-left: 12px;
 }
 
 /*index*/
@@ -180,7 +196,37 @@ body {
 .drawPage main .content-text {
   overflow-y: auto;
   max-height: 330px;
-  border: 2px solid purple;
+}
+.drawPage main .content-text::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(81, 143, 78);
+  border-radius: 30px;
+}
+.drawPage main .content-text::-webkit-scrollbar-thumb {
+  background-color: rgb(133, 179, 7);
+  border-radius: 30px;
+  border: 1px solid black;
+  -webkit-transition: opacity 1.2s ease;
+}
+.drawPage main .content-text::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(40, 228, 112);
+  -webkit-transition: opacity 1.2s ease;
+}
+.drawPage main .content-text .content-list ul li {
+  border: 1px solid rgb(34, 255, 34);
+  background-color: transparent;
+  transition: all 0.4s;
+}
+.drawPage main .content-text .content-list ul li:hover {
+  background-color: #e2f1aa;
+  transition: all 0.4s;
+}
+.drawPage main .content-text .content-list ul li:hover i {
+  color: #4d4141;
+  transition: all 0.3s;
+}
+.drawPage main .content-text .content-list ul .select {
+  background-color: rgb(0, 153, 46);
 }
 
 main {
@@ -299,13 +345,12 @@ main .content-text .content-list ul li {
   border: 1px solid blue;
   padding: 5px;
   text-align: center;
-}
-main .content-text .content-list ul li:hover {
-  background-color: #4ecdc4;
+  border-radius: 5px;
 }
 main .content-text .content-list ul li i {
   font-size: 30px;
   color: #fff;
+  transition: all 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */

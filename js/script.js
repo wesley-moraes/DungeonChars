@@ -7,8 +7,9 @@ var chars = {
     Driud : "Aephestos"
 }
 
-/*Objetos*/
-
+/*Objs
+all about the status from the characters
+*/
 var drawAtr = {
     for : "14",
     dex : "8",
@@ -27,8 +28,69 @@ var mazabeleAtr = {
     cha : "10"
 };
 
+var zaoseAtr = {
+    for : "10",
+    dex : "12",
+    con : "14",
+    int : "18",
+    wis : "14",
+    cha : "16"
+};
+
+var gregorioAtr = {
+    for : "18",
+    dex : "18",
+    con : "16",
+    int : "8",
+    wis : "12",
+    cha : "10"
+};
+
+var aephestosAtr = {
+    for : "10",
+    dex : "16",
+    con : "14",
+    int : "10",
+    wis : "18",
+    cha : "10"
+};
 
 
+/*The relationships between the characters*/
+var drawRelationship = {
+    gregorio : "good",
+    zaos : "bad",
+    aephestos : "good",
+    mazabele : "neutral"
+}
+
+var mazabeleRelationship = {
+    gregorio : "neutral",
+    zaos : "neutral",
+    aephestos : "good",
+    draw : "neutral"
+}
+
+var gregorioRelationship = {
+    mazabele : "good",
+    zaos : "friction/good",
+    aephestos : "good",
+    draw : "good"
+}
+
+var aephestosRelationship = {
+    mazabele : "good/neutral",
+    zaos : "good",
+    gregorio : "neutral/good",
+    draw : "good"
+}
+
+var zaosRelationship = {
+    mazabele : "neutral",
+    aephestos : "good",
+    gregorio : "friction",
+    draw : "neutral"
+}
 
 function identifyObj(char){
     var atributesValues = Object.values(char);
@@ -84,18 +146,30 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementsByClassName("content-info-atributes")[0].style.display = "block";
         document.getElementsByClassName("content-info-relationship")[0].style.display = "none";
         document.getElementsByClassName("content-info-favorite-magics")[0].style.display = "none";
+        
+        document.getElementById("li-atributes").classList.add("select");
+        document.getElementById("li-relationship").classList.remove("select");
+        document.getElementById("li-favs-magics").classList.remove("select");
     });
 
     document.getElementById("li-relationship").addEventListener("click", function(){
         document.getElementsByClassName("content-info-atributes")[0].style.display = "none";
         document.getElementsByClassName("content-info-relationship")[0].style.display = "block";
         document.getElementsByClassName("content-info-favorite-magics")[0].style.display = "none";
+        
+        document.getElementById("li-relationship").classList.add("select");
+        document.getElementById("li-atributes").classList.remove("select");
+        document.getElementById("li-favs-magics").classList.remove("select");
     });
     
     document.getElementById("li-favs-magics").addEventListener("click", function(){
         document.getElementsByClassName("content-info-atributes")[0].style.display = "none";
         document.getElementsByClassName("content-info-relationship")[0].style.display = "none";
         document.getElementsByClassName("content-info-favorite-magics")[0].style.display = "block";
+
+        document.getElementById("li-favs-magics").classList.add("select");
+        document.getElementById("li-atributes").classList.remove("select");
+        document.getElementById("li-relationship").classList.remove("select");
     });
 
     //formacao da pagina

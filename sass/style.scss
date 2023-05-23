@@ -21,7 +21,7 @@ body{
 }
 
 
-.allPage{
+.allCharPages{
 
     .content-text{
 
@@ -33,6 +33,30 @@ body{
             width: 100%;
             margin: 0;
             margin-bottom: 15px;
+        }
+
+        .content-info-atributes{
+
+            div{
+                float: left;
+                width: 100%;
+                margin-bottom: 10px;
+
+                p{
+                    float: left;
+                }
+
+                p:nth-child(1){
+                    font-size: 34px;
+                }
+
+                p:nth-child(2){
+                    color: #fff;
+                    font-size: 50px;
+                    margin-left: 12px;
+
+                }
+            }
         }
     }
 }
@@ -127,7 +151,50 @@ body{
         .content-text{
             overflow-y: auto;
             max-height: 330px;
-            border: 2px solid purple;
+            
+            &::-webkit-scrollbar{
+                width: 10px;
+                background-color: rgb(81, 143, 78);
+                border-radius: 30px;
+            }
+            &::-webkit-scrollbar-thumb{
+                background-color: rgb(133, 179, 7);
+                border-radius: 30px;
+                border: 1px solid black;
+                -webkit-transition: opacity 1.2s ease;
+            }
+            &::-webkit-scrollbar-thumb:hover{
+                background-color: rgb(40, 228, 112);
+                -webkit-transition: opacity 1.2s ease;
+            }
+
+            .content-list{
+
+                ul{
+
+                    li{
+
+                        border: 1px solid rgb(34, 255, 34);
+                        background-color: transparent;
+                        transition: all .4s;
+
+                        &:hover{
+                            background-color: #e2f1aa;
+                            transition: all .4s;
+
+                            i{
+                                color: #4d4141;
+                                transition: all .3s;
+                            }
+                        }
+                    }
+
+                    .select{
+                        background-color: rgb(0, 153, 46);
+                    }
+                }
+
+            }
         }
     }
 }
@@ -277,22 +344,25 @@ main{
                 width: 100%;
                 
 
+
                 li{
                     width: 33.33%;
                     float: left;
                     border: 1px solid blue;
                     padding: 5px;
                     text-align: center;
-        
-                    &:hover{
-                        background-color: #4ecdc4;
-                    }
+                    border-radius: 5px;
+                    
 
                     i{
                         font-size: 30px;
                         color: #fff;
+                        transition: all .3s;
                     }
+
+                    
                 }
+                
             }
         }
         
