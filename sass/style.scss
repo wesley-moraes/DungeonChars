@@ -28,6 +28,12 @@ body{
         div{
             border-bottom: 1px solid transparent;
         }
+
+        >div{
+            width: 100%;
+            margin: 0;
+            margin-bottom: 15px;
+        }
     }
 }
 
