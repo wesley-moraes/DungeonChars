@@ -5,7 +5,7 @@ var chars = {
     Warlock : "Zaos",
     Ranger : "Mazabele",
     Driud : "Aephestos"
-}
+};
 
 /*Objs
 all about the status from the characters
@@ -58,39 +58,39 @@ var aephestosAtr = {
 
 /*The relationships between the characters*/
 var drawRelationship = {
-    gregorio : "good",
-    zaos : "bad",
-    aephestos : "good",
-    mazabele : "neutral"
-}
+    Gregorio : "good",
+    Zaos : "bad",
+    Aephestos : "good",
+    Mazabele : "neutral"
+};
 
 var mazabeleRelationship = {
-    gregorio : "neutral",
-    zaos : "neutral",
-    aephestos : "good",
-    draw : "neutral"
-}
+    Gregorio : "neutral",
+    Zaos : "neutral",
+    Aephestos : "good",
+    Draw : "neutral"
+};
 
 var gregorioRelationship = {
-    mazabele : "good",
-    zaos : "friction/good",
-    aephestos : "good",
-    draw : "good"
-}
+    Mazabele : "good",
+    Zaos : "friction/good",
+    Aephestos : "good",
+    Draw : "good"
+};
 
 var aephestosRelationship = {
-    mazabele : "good/neutral",
-    zaos : "good",
-    gregorio : "neutral/good",
-    draw : "good"
-}
+    Mazabele : "good/neutral",
+    Zaos : "good",
+    Gregorio : "neutral/good",
+    Draw : "good"
+};
 
 var zaosRelationship = {
-    mazabele : "neutral",
-    aephestos : "good",
-    gregorio : "friction",
-    draw : "neutral"
-}
+    Mazabele : "neutral",
+    Aephestos : "good",
+    Gregorio : "friction",
+    Draw : "neutral"
+};
 
 function identifyObj(char){
     var atributesValues = Object.values(char);
@@ -102,7 +102,7 @@ function identifyObj(char){
     document.getElementById("atr-cha").innerHTML = atributesValues[5];
 
     //return atributesValues;
-}
+};
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -113,10 +113,11 @@ document.addEventListener("DOMContentLoaded", function(){
     //mostrarNome("Thyago");
 
     // for (const chave in chars){
-    //     if (chars.hasOwnProperty(chave)) {
-    //       console.log(`${chave}: ${chars[chave]}`);
-    //     }
+    //      if (chars.hasOwnProperty(chave)) {
+    //        console.log(`${chave}: ${chars[chave]}`);
+    //      }
     // }
+
 
     var classes = Object.keys(chars);
     var characters = Object.values(chars);
@@ -124,7 +125,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     //classes.forEach((classe) => console.log(classe));
     //characters.forEach((character) => console.log(character));
-
 
     // for(var i = 0; i < characters.length; i++){
     //     var item = document.createElement("li");
@@ -135,7 +135,25 @@ document.addEventListener("DOMContentLoaded", function(){
 
     // }
 
+    function relationshipList(charRelationship){
 
+        if( charRelationship == "drawRelationship" ){
+            var typeOfRelation = Object.values(drawRelationship);
+
+            for(var i = 0; i < typeOfRelation.length; i++){
+                
+                var item = document.createElement("p");
+                var itemContent = `- ${Object.keys(drawRelationship)[i]} is: ${Object.values(drawRelationship)[i]}`;
+                console.log(itemContent);
+                item.appendChild(document.createTextNode(itemContent));
+
+                document.getElementById("relationship-list").appendChild(item);
+                
+            };
+        };
+    };
+
+    relationshipList("drawRelationship");
 
     document.getElementsByClassName("content-info-atributes")[0].style.display = "block";
     document.getElementsByClassName("content-info-relationship")[0].style.display = "none";
