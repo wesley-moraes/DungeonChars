@@ -92,6 +92,30 @@ var zaosRelationship = {
     Draw : "neutral"
 };
 
+/*Favourites magics*/
+var drawFavMagics = {
+    cureWounds : {
+        name : "Cure Wounds",
+        description : "This is the Draw's favourite magic! He can heal all the person who needs be healed",
+        img : "../img/drawMagics/cureWounds.jpg",
+        alt : "Cure Wounds Magic"
+    },
+    
+    banishment : {
+        name : "Banishment",
+        description : "This is the most powerfull magic that Draw has! He can sent anyone to another dimension",
+        img : "../img/drawMagics/banishment.jpg",
+        alt : "Banishment Magic"
+    },
+
+    sanctuary : {
+        name : "Sanctuary",
+        description : "This is the most powerfull magic that Draw has! He can sent anyone to another dimension",
+        img : "../img/drawMagics/sanctuary.jpg",
+        alt : "Sanctuary Magic"
+    }
+};
+
 function identifyObj(char){
     var atributesValues = Object.values(char);
     document.getElementById("atr-for").innerHTML = atributesValues[0];
@@ -106,11 +130,61 @@ function identifyObj(char){
 
 document.addEventListener("DOMContentLoaded", function(){
 
-    //mensagem = () => window.alert("hello big brother");
-    //mensagem();
-    //com parametro
-    //mostrarNome = nome => window.alert("Meu nome é: " + nome);
-    //mostrarNome("Thyago");
+    function createFavsMagics(){
+
+        var wrapperFavMagics = document.getElementById("content-info-favorite-magics");
+        //console.log(wrapperFavMagics);
+
+        console.log(drawFavMagics.cureWounds.description);
+        
+    for (const informacao in drawFavMagics){
+          if (drawFavMagics.hasOwnProperty(informacao)) {
+            console.log(`${informacao}: ${drawFavMagics[informacao]}`);
+            console.log(`descricacao da magia: ${drawFavMagics[informacao].description}`);
+            console.log(`nome da magia: ${drawFavMagics[informacao].name}`);
+            console.log(`alt: ${drawFavMagics[informacao].alt}`);
+            console.log(`src: ${drawFavMagics[informacao].img}`);
+            //for(const informacao in drawFavMagics){
+                //console.log(`${drawFavMagics.informacao}: }`);
+                //let i = 0, l = data.items.length; i < l; i++
+                //console.log(`${ndIformacao}: ${drawFavMagics[ndIformacao]}`);
+            //}
+          }
+    };
+
+    /*
+    for (const chave in populacao) {
+        if (populacao.hasOwnProperty(chave)) {
+          console.log(`${chave}: ${populacao[chave]}`);
+        }
+      }
+    */
+
+        for(i = 0; i < drawFavMagics.length; i++){
+            console.log("oi");
+        }
+
+        wrapperFavMagics.innerHTML = 
+        
+        `
+            
+            <div class="wrapper-magic">
+                <div class="magic-img">
+                    kk
+                </div>
+                <div class="magic-description">
+                    kk          
+                </div>
+            </div>
+            `;
+        
+        //document.getElementsByClassName("content-info-favorite-magics")[0].appendChild(wrapperFavMagics);
+    
+    
+        //console.log(wrapperFavMagics);
+    };
+    
+    createFavsMagics();
 
     // for (const chave in chars){
     //      if (chars.hasOwnProperty(chave)) {
@@ -144,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 
                 var item = document.createElement("p");
                 var itemContent = `- ${Object.keys(drawRelationship)[i]} is: ${Object.values(drawRelationship)[i]}`;
-                console.log(itemContent);
+                //console.log(itemContent);
                 item.appendChild(document.createTextNode(itemContent));
 
                 document.getElementById("relationship-list").appendChild(item);
@@ -193,7 +267,7 @@ document.addEventListener("DOMContentLoaded", function(){
     //formacao da pagina
     var charsPage = document.getElementsByTagName("body");
     var objetoStringChar = charsPage[0].id;
-    console.log(typeof objetoStringChar);
+    //console.log(typeof objetoStringChar);
 
     if(objetoStringChar == "drawPageId"){
         atributesValues = identifyObj(drawAtr);
@@ -210,7 +284,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     }else if(objetoStringChar == "zaosPageId"){
         atributesValues = identifyObj(zaosAtr);
-
     }
 
 });
