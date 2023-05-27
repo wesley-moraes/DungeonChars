@@ -58,10 +58,10 @@ var aephestosAtr = {
 
 /*The relationships between the characters*/
 var drawRelationship = {
-    Gregorio : "good",
-    Zaos : "bad",
-    Aephestos : "good",
-    Mazabele : "neutral"
+    Gregorio : "good! Because he can trust him and ask anythink! Gregs is a good person!",
+    Zaos : "bad! He's a caos agent and Draw don't like. However, they live ok",
+    Aephestos : "good! They usually talk about life, magic and the reason os all this",
+    Mazabele : "neutral! She's so quiet... "
 };
 
 var mazabeleRelationship = {
@@ -72,10 +72,10 @@ var mazabeleRelationship = {
 };
 
 var gregorioRelationship = {
-    Mazabele : "good",
-    Zaos : "friction/good",
-    Aephestos : "good",
-    Draw : "good"
+    Mazabele : "good! Althught she's quiet, he likes her",
+    Zaos : "friction/good! They usually fight eachother but they like either",
+    Aephestos : "good! They've been travelling together so he considere him as a familiar",
+    Draw : "good! "
 };
 
 var aephestosRelationship = {
@@ -97,21 +97,21 @@ var drawFavMagics = {
     cureWounds : {
         name : "Cure Wounds",
         description : "This is the Draw's favourite magic! He can heal all the person who needs be healed",
-        img : "../img/drawMagics/cureWounds.jpg",
+        img : "../img/drawMagics/cureWounds.png",
         alt : "Cure Wounds Magic"
     },
     
     banishment : {
         name : "Banishment",
         description : "This is the most powerfull magic that Draw has! He can sent anyone to another dimension",
-        img : "../img/drawMagics/banishment.jpg",
+        img : "../img/drawMagics/banishment.png",
         alt : "Banishment Magic"
     },
 
     sanctuary : {
         name : "Sanctuary",
         description : "This is the most powerfull magic that Draw has! He can sent anyone to another dimension",
-        img : "../img/drawMagics/sanctuary.jpg",
+        img : "../img/drawMagics/sanctuary.png",
         alt : "Sanctuary Magic"
     }
 };
@@ -133,17 +133,33 @@ document.addEventListener("DOMContentLoaded", function(){
     function createFavsMagics(){
 
         var wrapperFavMagics = document.getElementById("content-info-favorite-magics");
-        //console.log(wrapperFavMagics);
 
-        console.log(drawFavMagics.cureWounds.description);
+        //console.log(drawFavMagics.cureWounds.description);
         
+        var contentFavMagics = '';
+
     for (const informacao in drawFavMagics){
           if (drawFavMagics.hasOwnProperty(informacao)) {
-            console.log(`${informacao}: ${drawFavMagics[informacao]}`);
+            console.log(`${informacao}: `);
             console.log(`descricacao da magia: ${drawFavMagics[informacao].description}`);
             console.log(`nome da magia: ${drawFavMagics[informacao].name}`);
             console.log(`alt: ${drawFavMagics[informacao].alt}`);
             console.log(`src: ${drawFavMagics[informacao].img}`);
+
+            contentFavMagics += `
+                <div class="wrapper-magic">
+                    <div class="magic-img">
+                        <img src="${drawFavMagics[informacao].img}" alt="${drawFavMagics[informacao].alt}" />
+                    </div>
+                    <div class="magic-description">
+                        <div>
+                            <h2><span>Spell:</span> ${drawFavMagics[informacao].name}</h2>
+                            <p>${drawFavMagics[informacao].description}</p>
+                        </div>          
+                    </div>
+                </div>
+            `
+
             //for(const informacao in drawFavMagics){
                 //console.log(`${drawFavMagics.informacao}: }`);
                 //let i = 0, l = data.items.length; i < l; i++
@@ -160,25 +176,27 @@ document.addEventListener("DOMContentLoaded", function(){
       }
     */
 
-        for(i = 0; i < drawFavMagics.length; i++){
-            console.log("oi");
-        }
 
+        /*
         wrapperFavMagics.innerHTML = 
         
         `
             
             <div class="wrapper-magic">
                 <div class="magic-img">
-                    kk
+                    <img src="${drawFavMagics[informacao].img}" alt="${drawFavMagics[informacao].alt}" />
                 </div>
                 <div class="magic-description">
                     kk          
                 </div>
             </div>
             `;
-        
-        //document.getElementsByClassName("content-info-favorite-magics")[0].appendChild(wrapperFavMagics);
+            */
+
+            //wrapperFavMagics.appendChild(document.createTextNode(contentFavMagics));
+
+            //wrapperFavMagics.createTextNode();
+            wrapperFavMagics.innerHTML = contentFavMagics;
     
     
         //console.log(wrapperFavMagics);
