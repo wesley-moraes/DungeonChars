@@ -77,10 +77,10 @@ var gregorioRelationship = {
 };
 
 var aephestosRelationship = {
-    Mazabele : "good/neutral",
-    Zaos : "good",
-    Gregorio : "neutral/good",
-    Draw : "good"
+    Mazabele : "neutral/good! He knews that he wasn't seem as a friend because of his blood, but everything chanded with time",
+    Zaos : "good! Aephestos released that he has never considered him as bottom because He hasn't pure elf blood! But considered equal",
+    Gregorio : "good! As a half-elf Apehestos learns a lot about the human side from him",
+    Draw : "good! See his beliefs as he has, and respects this"
 };
 
 var zaosRelationship = {
@@ -136,6 +136,30 @@ var mazabeleFavMagics = {
         alt : "Sanctuary Magic"
     }
 };
+
+var aephestosFavMagics = {
+    tidalWave : {
+        name : "Tidal Wave",
+        description : "Manipulating water he can create a strong wave that falls violently",
+        img : "../img/aephestosMagics/tidalWave.jpg",
+        alt : "Tidal Wave Magic"
+    },
+    
+    Moonbeam : {
+        name : "Moonbeam",
+        description : "A tower of pale silver light that engulfs enemies in ghostly flames",
+        img : "../img/aephestosMagics/moonBeam.jpg",
+        alt : "Banishment Magic"
+    },
+
+    guiddingBold : {
+        name : "Guiding Bolt",
+        description : "A ray of spiritual energy that highlights the enemy",
+        img : "../img/aephestosMagics/guidingBolt.jpg",
+        alt : "Sanctuary Magic"
+    }
+};
+
 
 /*
 Functions
@@ -303,8 +327,10 @@ document.addEventListener("DOMContentLoaded", function(){
         createRelationShip(mazabeleRelationship);
         createFavsMagics(mazabeleFavMagics);
 
-    }else if(pageId == "aephestoslePageId"){
-        atributesValues = createInfoAtributes(aephestosAtr);
+    }else if(pageId == "aephestosPageId"){
+        createInfoAtributes(aephestosAtr);
+        createRelationShip(aephestosRelationship);
+        createFavsMagics(aephestosFavMagics);
 
     }else if(pageId == "gregorioPageId"){
         atributesValues = createInfoAtributes(gregorioAtr);

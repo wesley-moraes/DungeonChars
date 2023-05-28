@@ -1,0 +1,63 @@
+@mixin transitionSpanColor{
+    transition: .3s;
+}
+
+.cloudColor{
+    color:#a2c7bb;
+    @include transitionSpanColor;
+
+    &:hover{
+        color: #5ca18c;
+        @include transitionSpanColor;
+    }
+}
+
+.fireColor{
+    color: #ac0d0d;
+    @include transitionSpanColor;
+
+    &:hover{
+        color: #7e3131;
+        @include transitionSpanColor;
+    }
+}
+
+.hillColor{
+    color: #78bd91;
+    @include transitionSpanColor;
+
+    &:hover{
+        color: #438b5e;
+        @include transitionSpanColor;
+    }
+}
+
+.frostColor{
+    color: #4ecdc4;
+    @include transitionSpanColor();
+
+    &:hover{
+        color: #98fff8;
+        @include transitionSpanColor;
+    }
+}
+
+.stoneColor{
+    color: #bbbebd;
+    @include transitionSpanColor();
+
+    &:hover{
+        color: #75b49f;
+        @include transitionSpanColor;
+    }
+}
+
+.stormColor{
+    color: #6343d8;
+    @include transitionSpanColor;
+
+    &:hover{
+        color: #5b39d6;
+        @include transitionSpanColor;
+    }
+}

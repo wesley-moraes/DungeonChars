@@ -85,86 +85,6 @@ body {
   font-family: westbourne-serif-italic;
   src: url("../fonts/Westbourne_Serif_Italic.otf");
 }
-/*Principais arquivos*/
-/*general*/
-body {
-  float: left;
-  width: 100%;
-}
-
-.fstPage {
-  background-image: url("../img/fst-page-bg-giphy.gif");
-  background-size: cover;
-}
-
-.wrapper {
-  float: left;
-  width: 100%;
-  height: 100vh;
-}
-
-.allCharPages .content-text div {
-  border-bottom: 1px solid transparent;
-  margin-bottom: 10px;
-}
-.allCharPages .content-text > div {
-  width: 100%;
-  margin: 0;
-  margin-bottom: 15px;
-  padding-right: 5px;
-}
-.allCharPages .content-text .content-info-atributes div {
-  float: left;
-  width: 100%;
-  margin-bottom: 10px;
-}
-.allCharPages .content-text .content-info-atributes div p {
-  float: left;
-}
-.allCharPages .content-text .content-info-atributes div p:nth-child(1) {
-  font-size: 34px;
-}
-.allCharPages .content-text .content-info-atributes div p:nth-child(2) {
-  color: #fff;
-  font-size: 50px;
-  margin-left: 12px;
-}
-.allCharPages .content-text .relationship-list p {
-  margin-bottom: 10px;
-}
-.allCharPages .content-info-favorite-magics {
-  float: left;
-  width: 100%;
-}
-.allCharPages .content-info-favorite-magics .wrapper-magic {
-  float: left;
-  width: 100%;
-  border-bottom: 1px solid #fff;
-  margin-bottom: 15px;
-}
-.allCharPages .content-info-favorite-magics .wrapper-magic .magic-img {
-  float: left;
-  margin-bottom: 5px;
-  margin-right: 10px;
-}
-.allCharPages .content-info-favorite-magics .wrapper-magic .magic-img img {
-  width: 100px;
-  height: 100px;
-  border: 1px solid #fff;
-  border-radius: 50%;
-}
-.allCharPages .content-info-favorite-magics .wrapper-magic .magic-description h2 {
-  font-size: 23px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-.allCharPages .content-info-favorite-magics .wrapper-magic .magic-description h2 span {
-  font-size: 27px;
-  text-decoration: underline;
-  font-weight: normal;
-}
-
-/*index*/
 .cloudColor {
   color: #a2c7bb;
   transition: 0.3s;
@@ -219,160 +139,24 @@ body {
   transition: 0.3s;
 }
 
-/*Draw*/
-.drawPage {
-  background-image: url("../img/draw-bg-giphy.gif");
-  background-size: cover;
-}
-.drawPage main {
-  border: 4px solid #a2fa1b;
-  background-image: linear-gradient(to top, rgba(13, 88, 26, 0.466), rgb(12, 88, 29));
-  height: 500px;
-}
-.drawPage main .content-text {
-  overflow-y: auto;
-  max-height: 330px;
-}
-.drawPage main .content-text::-webkit-scrollbar {
-  width: 10px;
-  background-color: rgb(81, 143, 78);
-  border-radius: 30px;
-}
-.drawPage main .content-text::-webkit-scrollbar-thumb {
-  background-color: rgb(133, 179, 7);
-  border-radius: 30px;
-  border: 1px solid black;
-  -webkit-transition: opacity 1.2s ease;
-}
-.drawPage main .content-text::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(40, 228, 112);
-  -webkit-transition: opacity 1.2s ease;
-}
-.drawPage main .content-text .content-list ul li {
-  border: 1px solid rgb(34, 255, 34);
-  background-color: transparent;
-  transition: all 0.4s;
-}
-.drawPage main .content-text .content-list ul li:hover {
-  background-color: #e2f1aa;
-  transition: all 0.4s;
-}
-.drawPage main .content-text .content-list ul li:hover i {
-  color: #4d4141;
-  transition: all 0.3s;
-}
-.drawPage main .content-text .content-list ul .select {
-  background-color: rgb(0, 153, 46);
-}
-.drawPage main .magic-description h2 {
-  color: #00ff6a;
-}
-.drawPage main .magic-description h2 span {
-  color: rgb(128, 255, 177);
+/*Principais arquivos*/
+/*variaveis*/
+/*general*/
+body {
+  float: left;
+  width: 100%;
 }
 
-/*Mazabele*/
-.mazabelePage {
-  background-image: url("../img/mazabele-bg-giphy.gif");
+/*Index*/
+.fstPage {
+  background-image: url("../img/fst-page-bg-giphy.gif");
   background-size: cover;
-}
-.mazabelePage main {
-  border: 4px solid #ff44ef;
-  background-image: linear-gradient(to top, rgba(202, 11, 123, 0.664), rgba(255, 0, 191, 0.199));
-  height: 500px;
-}
-.mazabelePage main .content-text {
-  overflow-y: auto;
-  max-height: 330px;
-}
-.mazabelePage main .content-text::-webkit-scrollbar {
-  width: 10px;
-  background-color: rgb(222, 153, 171);
-  border-radius: 30px;
-}
-.mazabelePage main .content-text::-webkit-scrollbar-thumb {
-  background-color: rgb(116, 58, 75);
-  border-radius: 30px;
-  border: 1px solid rgb(189, 123, 140);
-  -webkit-transition: opacity 1.2s ease;
-}
-.mazabelePage main .content-text::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(167, 28, 60);
-  -webkit-transition: opacity 1.2s ease;
-}
-.mazabelePage main .content-text .content-list ul li {
-  border: 1px solid rgb(34, 255, 34);
-  background-color: transparent;
-  transition: all 0.4s;
-}
-.mazabelePage main .content-text .content-list ul li:hover {
-  background-color: #e2f1aa;
-  transition: all 0.4s;
-}
-.mazabelePage main .content-text .content-list ul li:hover i {
-  color: #4d4141;
-  transition: all 0.3s;
-}
-.mazabelePage main .content-text .content-list ul .select {
-  background-color: rgb(0, 153, 46);
-}
-.mazabelePage main .magic-description h2 {
-  color: #00ff6a;
-}
-.mazabelePage main .magic-description h2 span {
-  color: rgb(128, 255, 177);
 }
 
-/*Zaos*/
-.zaosPage {
-  background-image: url("../img/zaos-bg-giphy.gif");
-  background-size: cover;
-}
-.zaosPage main {
-  border: 4px solid #1c174d;
-  background-image: linear-gradient(to top, rgba(0, 3, 156, 0.863), rgba(0, 5, 78, 0.199));
-  height: 500px;
-}
-.zaosPage main .content-text {
-  overflow-y: auto;
-  max-height: 330px;
-}
-.zaosPage main .content-text::-webkit-scrollbar {
-  width: 10px;
-  background-color: rgb(26, 18, 54);
-  border-radius: 30px;
-}
-.zaosPage main .content-text::-webkit-scrollbar-thumb {
-  background-color: rgb(16, 8, 65);
-  border-radius: 30px;
-  border: 1px solid rgb(53, 52, 52);
-  -webkit-transition: opacity 1.2s ease;
-}
-.zaosPage main .content-text::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(5, 20, 224);
-  -webkit-transition: opacity 1.2s ease;
-}
-.zaosPage main .content-text .content-list ul li {
-  border: 1px solid rgb(55, 227, 233);
-  background-color: transparent;
-  transition: all 0.4s;
-}
-.zaosPage main .content-text .content-list ul li:hover {
-  background-color: #047ee2;
-  transition: all 0.4s;
-}
-.zaosPage main .content-text .content-list ul li:hover i {
-  color: #003eb3;
-  transition: all 0.3s;
-}
-.zaosPage main .content-text .content-list ul .select {
-  background-color: rgb(72, 84, 245);
-}
-.zaosPage main .magic-description h2 {
-  color: #00ff6a;
-}
-.zaosPage main .magic-description h2 span {
-  color: rgb(128, 255, 177);
+.wrapper {
+  float: left;
+  width: 100%;
+  height: 100vh;
 }
 
 main {
@@ -497,6 +281,244 @@ main .content-text .content-list ul li i {
   font-size: 30px;
   color: #fff;
   transition: all 0.3s;
+}
+
+/*general chars*/
+.allCharPages main {
+  height: 500px;
+}
+.allCharPages .content-text {
+  overflow-y: auto;
+  max-height: 330px;
+}
+.allCharPages .content-text::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 30px;
+}
+.allCharPages .content-text::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+}
+.allCharPages .content-text .content-list ul li {
+  background-color: transparent;
+  transition: all 0.4s;
+}
+.allCharPages .content-text .content-list ul li:hover {
+  transition: all 0.4s;
+}
+.allCharPages .content-text .content-list ul li:hover i {
+  transition: all 0.3s;
+}
+.allCharPages .content-text div {
+  border-bottom: 1px solid transparent;
+  margin-bottom: 10px;
+}
+.allCharPages .content-text > div {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 15px;
+  padding-right: 5px;
+}
+.allCharPages .content-text .content-info-atributes div {
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.allCharPages .content-text .content-info-atributes div p {
+  float: left;
+}
+.allCharPages .content-text .content-info-atributes div p:nth-child(1) {
+  font-size: 34px;
+}
+.allCharPages .content-text .content-info-atributes div p:nth-child(2) {
+  color: #fff;
+  font-size: 50px;
+  margin-left: 12px;
+}
+.allCharPages .content-text .relationship-list p {
+  margin-bottom: 10px;
+}
+.allCharPages .content-info-favorite-magics {
+  float: left;
+  width: 100%;
+}
+.allCharPages .content-info-favorite-magics .wrapper-magic {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 15px;
+}
+.allCharPages .content-info-favorite-magics .wrapper-magic .magic-img {
+  float: left;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+.allCharPages .content-info-favorite-magics .wrapper-magic .magic-img img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.allCharPages .content-info-favorite-magics .wrapper-magic .magic-description h2 {
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.allCharPages .content-info-favorite-magics .wrapper-magic .magic-description h2 span {
+  font-size: 27px;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+/*Aephestos*/
+.aephestosPage {
+  background-image: url("../img/aephestos-bg-giphy.gif");
+  background-size: cover;
+}
+.aephestosPage main {
+  border: 4px solid #fed72f;
+  background-image: linear-gradient(to top, rgba(255, 211, 15, 0.349), rgba(253, 245, 201, 0.562));
+}
+.aephestosPage main .content-text::-webkit-scrollbar {
+  background-color: #ba9b00;
+}
+.aephestosPage main .content-text::-webkit-scrollbar-thumb {
+  background-color: rgb(236, 200, 47);
+  border: 1px solid rgb(255, 255, 255);
+}
+.aephestosPage main .content-text::-webkit-scrollbar-thumb:hover {
+  background-color: #a48a2b;
+}
+.aephestosPage main .content-text .content-list ul li {
+  border: 1px solid #ecc82f;
+}
+.aephestosPage main .content-text .content-list ul li:hover {
+  background-color: #796316;
+}
+.aephestosPage main .content-text .content-list ul li:hover i {
+  color: #fad75d;
+}
+.aephestosPage main .content-text .content-list ul .select {
+  background-color: #4e3c00;
+}
+.aephestosPage main .magic-description h2 {
+  color: #fee13d;
+}
+.aephestosPage main .magic-description h2 span {
+  color: #dfbb00;
+}
+
+/*Draw*/
+.drawPage {
+  background-image: url("../img/draw-bg-giphy.gif");
+  background-size: cover;
+}
+.drawPage main {
+  border: 4px solid #a2fa1b;
+  background-image: linear-gradient(to top, rgba(13, 88, 26, 0.466), rgb(12, 88, 29));
+}
+.drawPage main .content-text::-webkit-scrollbar {
+  background-color: rgb(81, 143, 78);
+}
+.drawPage main .content-text::-webkit-scrollbar-thumb {
+  background-color: rgb(133, 179, 7);
+  border: 1px solid black;
+}
+.drawPage main .content-text::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(40, 228, 112);
+}
+.drawPage main .content-text .content-list ul li {
+  border: 1px solid rgb(34, 255, 34);
+}
+.drawPage main .content-text .content-list ul li:hover {
+  background-color: #e2f1aa;
+}
+.drawPage main .content-text .content-list ul li:hover i {
+  color: #4d4141;
+}
+.drawPage main .content-text .content-list ul .select {
+  background-color: rgb(0, 153, 46);
+}
+.drawPage main .magic-description h2 {
+  color: #00ff6a;
+}
+.drawPage main .magic-description h2 span {
+  color: rgb(128, 255, 177);
+}
+
+/*Mazabele*/
+.mazabelePage {
+  background-image: url("../img/mazabele-bg-giphy.gif");
+  background-size: cover;
+}
+.mazabelePage main {
+  border: 4px solid #ff44ef;
+  background-image: linear-gradient(to top, rgba(202, 11, 123, 0.664), rgba(255, 0, 191, 0.199));
+}
+.mazabelePage main .content-text::-webkit-scrollbar {
+  background-color: rgb(222, 153, 171);
+}
+.mazabelePage main .content-text::-webkit-scrollbar-thumb {
+  background-color: rgb(116, 58, 75);
+  border: 1px solid rgb(189, 123, 140);
+}
+.mazabelePage main .content-text::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(167, 28, 60);
+}
+.mazabelePage main .content-text .content-list ul li {
+  border: 1px solid rgb(34, 255, 34);
+}
+.mazabelePage main .content-text .content-list ul li:hover {
+  background-color: #e2f1aa;
+}
+.mazabelePage main .content-text .content-list ul li:hover i {
+  color: #4d4141;
+}
+.mazabelePage main .content-text .content-list ul .select {
+  background-color: rgb(0, 153, 46);
+}
+.mazabelePage main .magic-description h2 {
+  color: #00ff6a;
+}
+.mazabelePage main .magic-description h2 span {
+  color: rgb(128, 255, 177);
+}
+
+/*Zaos*/
+.zaosPage {
+  background-image: url("../img/zaos-bg-giphy.gif");
+  background-size: cover;
+}
+.zaosPage main {
+  border: 4px solid #1c174d;
+  background-image: linear-gradient(to top, rgba(0, 3, 156, 0.863), rgba(0, 5, 78, 0.199));
+}
+.zaosPage main .content-text::-webkit-scrollbar {
+  background-color: rgb(26, 18, 54);
+}
+.zaosPage main .content-text::-webkit-scrollbar-thumb {
+  background-color: rgb(16, 8, 65);
+  border: 1px solid rgb(53, 52, 52);
+}
+.zaosPage main .content-text::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(5, 20, 224);
+}
+.zaosPage main .content-text .content-list ul li {
+  border: 1px solid rgb(55, 227, 233);
+}
+.zaosPage main .content-text .content-list ul li:hover {
+  background-color: #047ee2;
+}
+.zaosPage main .content-text .content-list ul li:hover i {
+  color: #003eb3;
+}
+.zaosPage main .content-text .content-list ul .select {
+  background-color: rgb(72, 84, 245);
+}
+.zaosPage main .magic-description h2 {
+  color: #00ff6a;
+}
+.zaosPage main .magic-description h2 span {
+  color: rgb(128, 255, 177);
 }
 
 /*# sourceMappingURL=style.css.map */
