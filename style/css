@@ -105,7 +105,6 @@ body {
 
 .allCharPages .content-text div {
   border-bottom: 1px solid transparent;
-  margin-bottom: 10px;
 }
 .allCharPages .content-text > div {
   width: 100%;
@@ -130,7 +129,7 @@ body {
   margin-left: 12px;
 }
 .allCharPages .content-text .relationship-list p {
-  margin-bottom: 10px;
+  font-size: 40px;
 }
 .allCharPages .content-info-favorite-magics {
   float: left;
@@ -226,7 +225,7 @@ body {
 }
 .drawPage main {
   border: 4px solid #a2fa1b;
-  background-image: linear-gradient(to top, rgba(13, 88, 26, 0.466), rgb(12, 88, 29));
+  background-image: linear-gradient(to top, rgba(67, 209, 90, 0.233), rgb(7, 39, 14));
   height: 500px;
 }
 .drawPage main .content-text {
@@ -395,4 +394,4 @@ main .content-text .content-list ul li i {
   transition: all 0.3s;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=css.map */

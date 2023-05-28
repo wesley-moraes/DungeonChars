@@ -60,7 +60,7 @@ var aephestosAtr = {
 var drawRelationship = {
     Gregorio : "good! Because he can trust him and ask anythink! Gregs is a good person!",
     Zaos : "bad! He's a caos agent and Draw don't like. However, they live ok",
-    Aephestos : "good! They usually talk about life, magic and the reason os all this",
+    Aephestos : "good! They usually talk about life, magic and the reason os all this!",
     Mazabele : "neutral! She's so quiet... "
 };
 
