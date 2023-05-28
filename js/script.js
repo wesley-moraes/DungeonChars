@@ -114,6 +114,29 @@ var drawFavMagics = {
     }
 };
 
+var mazabeleFavMagics = {
+    cureWounds : {
+        name : "Cure Wounds",
+        description : "This is the Draw's favourite magic! He can heal all the person who needs be healed",
+        img : "../img/drawMagics/cureWounds.png",
+        alt : "Cure Wounds Magic"
+    },
+    
+    huntersMark : {
+        name : "Hunter's Mark",
+        description : "It can mark the enemy",
+        img : "../img/drawMagics/banishment.png",
+        alt : "Banishment Magic"
+    },
+
+    sanctuary : {
+        name : "Sanctuary",
+        description : "This is the most powerfull magic that Draw has! He can sent anyone to another dimension",
+        img : "../img/drawMagics/sanctuary.png",
+        alt : "Sanctuary Magic"
+    }
+};
+
 /*
 Functions
 */
@@ -289,6 +312,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
     }else if(pageId == "mazabelePageId"){
         atributesValues = createInfoAtributes(mazabeleAtr);
+        createRelationShip(mazabeleRelationship);
+        createFavsMagics(mazabeleFavMagics);
 
     }else if(pageId == "aephestoslePageId"){
         atributesValues = createInfoAtributes(aephestosAtr);
