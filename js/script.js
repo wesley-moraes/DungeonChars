@@ -7,9 +7,7 @@ var chars = {
     Driud : "Aephestos"
 };
 
-/*Objs
-all about the status from the characters
-*/
+/*Status from the characters*/
 var drawAtr = {
     for : "14",
     dex : "8",
@@ -28,7 +26,7 @@ var mazabeleAtr = {
     cha : "10"
 };
 
-var zaoseAtr = {
+var zaosAtr = {
     for : "10",
     dex : "12",
     con : "14",
@@ -116,7 +114,10 @@ var drawFavMagics = {
     }
 };
 
-function identifyObj(char){
+/*
+Functions
+*/
+function createInfoAtributes(char){
     var atributesValues = Object.values(char);
     document.getElementById("atr-for").innerHTML = atributesValues[0];
     document.getElementById("atr-dex").innerHTML = atributesValues[1];
@@ -124,28 +125,61 @@ function identifyObj(char){
     document.getElementById("atr-int").innerHTML = atributesValues[3];
     document.getElementById("atr-wis").innerHTML = atributesValues[4];
     document.getElementById("atr-cha").innerHTML = atributesValues[5];
-
-    //return atributesValues;
 };
 
-document.addEventListener("DOMContentLoaded", function(){
+/*
+function createRelationShip(charRelationship){
 
-    function createFavsMagics(){
+    if( charRelationship == "drawRelationship" ){
+        var typeOfRelation = Object.values(drawRelationship);
 
-        var wrapperFavMagics = document.getElementById("content-info-favorite-magics");
+        for(var i = 0; i < typeOfRelation.length; i++){
+            
+            var item = document.createElement("p");
+            var itemContent = `- ${Object.keys(drawRelationship)[i]} is: ${Object.values(drawRelationship)[i]}`;
+            //console.log(itemContent);
+            item.appendChild(document.createTextNode(itemContent));
 
-        //console.log(drawFavMagics.cureWounds.description);
-        
-        var contentFavMagics = '';
+            document.getElementById("relationship-list").appendChild(item);
+            
+        };
+    };
+};
+*/
+
+function createRelationShip(charRelationship){
+
+    var lenghtRelation = Object.values(charRelationship);
+
+    for(var i = 0; i < lenghtRelation.length; i++){
+            
+        var item = document.createElement("p");
+        var itemContent = `- ${Object.keys(charRelationship)[i]} is: ${Object.values(charRelationship)[i]}`;
+        item.appendChild(document.createTextNode(itemContent));
+
+        document.getElementById("relationship-list").appendChild(item);
+            
+    };
+
+};
+
+/*
+function createFavsMagics(){
+
+    var wrapperFavMagics = document.getElementById("content-info-favorite-magics");
+    var contentFavMagics = '';
 
     for (const informacao in drawFavMagics){
-          if (drawFavMagics.hasOwnProperty(informacao)) {
+        if (drawFavMagics.hasOwnProperty(informacao)) {
+
+            
             console.log(`${informacao}: `);
             console.log(`descricacao da magia: ${drawFavMagics[informacao].description}`);
             console.log(`nome da magia: ${drawFavMagics[informacao].name}`);
             console.log(`alt: ${drawFavMagics[informacao].alt}`);
             console.log(`src: ${drawFavMagics[informacao].img}`);
-
+            //Acess each value and key in the object
+        
             contentFavMagics += `
                 <div class="wrapper-magic">
                     <div class="magic-img">
@@ -159,94 +193,56 @@ document.addEventListener("DOMContentLoaded", function(){
                     </div>
                 </div>
             `
-
-            //for(const informacao in drawFavMagics){
-                //console.log(`${drawFavMagics.informacao}: }`);
-                //let i = 0, l = data.items.length; i < l; i++
-                //console.log(`${ndIformacao}: ${drawFavMagics[ndIformacao]}`);
-            //}
-          }
-    };
-
-    /*
-    for (const chave in populacao) {
-        if (populacao.hasOwnProperty(chave)) {
-          console.log(`${chave}: ${populacao[chave]}`);
         }
-      }
-    */
+    };
+    
+    //Insert the html content
+    wrapperFavMagics.innerHTML = contentFavMagics;
+    
+};
+*/
 
+function createFavsMagics(charFavsMagics){
 
-        /*
-        wrapperFavMagics.innerHTML = 
-        
-        `
-            
-            <div class="wrapper-magic">
-                <div class="magic-img">
-                    <img src="${drawFavMagics[informacao].img}" alt="${drawFavMagics[informacao].alt}" />
-                </div>
-                <div class="magic-description">
-                    kk          
-                </div>
-            </div>
-            `;
+    var wrapperFavMagics = document.getElementById("content-info-favorite-magics");
+    var contentFavMagics = '';
+
+    for (const informacao in charFavsMagics){
+        if (charFavsMagics.hasOwnProperty(informacao)) {
+
+            /* 
+            console.log(`${informacao}: `);
+            console.log(`descricacao da magia: ${drawFavMagics[informacao].description}`);
+            console.log(`nome da magia: ${drawFavMagics[informacao].name}`);
+            console.log(`alt: ${drawFavMagics[informacao].alt}`);
+            console.log(`src: ${drawFavMagics[informacao].img}`);
+            //Acess each value and key in the object
             */
-
-            //wrapperFavMagics.appendChild(document.createTextNode(contentFavMagics));
-
-            //wrapperFavMagics.createTextNode();
-            wrapperFavMagics.innerHTML = contentFavMagics;
-    
-    
-        //console.log(wrapperFavMagics);
+        
+            contentFavMagics += `
+                <div class="wrapper-magic">
+                    <div class="magic-img">
+                        <img src="${charFavsMagics[informacao].img}" alt="${charFavsMagics[informacao].alt}" />
+                    </div>
+                    <div class="magic-description">
+                        <div>
+                            <h2><span>Spell:</span> ${charFavsMagics[informacao].name}</h2>
+                            <p>${charFavsMagics[informacao].description}</p>
+                        </div>          
+                    </div>
+                </div>
+            `
+        }
     };
     
-    createFavsMagics();
+    //Insert the html content
+    wrapperFavMagics.innerHTML = contentFavMagics;
+    
+};
 
-    // for (const chave in chars){
-    //      if (chars.hasOwnProperty(chave)) {
-    //        console.log(`${chave}: ${chars[chave]}`);
-    //      }
-    // }
+document.addEventListener("DOMContentLoaded", function(){
 
-
-    var classes = Object.keys(chars);
-    var characters = Object.values(chars);
-    // console.log(classes);
-
-    //classes.forEach((classe) => console.log(classe));
-    //characters.forEach((character) => console.log(character));
-
-    // for(var i = 0; i < characters.length; i++){
-    //     var item = document.createElement("li");
-
-    //     item.appendChild(document.createTextNode(characters[i]));
-
-    //     document.getElementById("CharsList").appendChild(item);
-
-    // }
-
-    function relationshipList(charRelationship){
-
-        if( charRelationship == "drawRelationship" ){
-            var typeOfRelation = Object.values(drawRelationship);
-
-            for(var i = 0; i < typeOfRelation.length; i++){
-                
-                var item = document.createElement("p");
-                var itemContent = `- ${Object.keys(drawRelationship)[i]} is: ${Object.values(drawRelationship)[i]}`;
-                //console.log(itemContent);
-                item.appendChild(document.createTextNode(itemContent));
-
-                document.getElementById("relationship-list").appendChild(item);
-                
-            };
-        };
-    };
-
-    relationshipList("drawRelationship");
-
+    //default
     document.getElementsByClassName("content-info-atributes")[0].style.display = "block";
     document.getElementsByClassName("content-info-relationship")[0].style.display = "none";
     document.getElementsByClassName("content-info-favorite-magics")[0].style.display = "none";
@@ -282,26 +278,26 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById("li-relationship").classList.remove("select");
     });
 
-    //formacao da pagina
+    //Create of Char Page
     var charsPage = document.getElementsByTagName("body");
-    var objetoStringChar = charsPage[0].id;
-    //console.log(typeof objetoStringChar);
+    var pageId = charsPage[0].id;
 
-    if(objetoStringChar == "drawPageId"){
-        atributesValues = identifyObj(drawAtr);
-        //var atributesValues = identifyObj(drawAtr);
+    if(pageId == "drawPageId"){
+        createInfoAtributes(drawAtr);
+        createRelationShip(drawRelationship);
+        createFavsMagics(drawFavMagics);
 
-    }else if(objetoStringChar == "mazabelePageId"){
-        atributesValues = identifyObj(mazabeleAtr);
+    }else if(pageId == "mazabelePageId"){
+        atributesValues = createInfoAtributes(mazabeleAtr);
 
-    }else if(objetoStringChar == "aephestoslePageId"){
-        atributesValues = identifyObj(aephestosAtr);
+    }else if(pageId == "aephestoslePageId"){
+        atributesValues = createInfoAtributes(aephestosAtr);
 
-    }else if(objetoStringChar == "gregorioPageId"){
-        atributesValues = identifyObj(gregorioleAtr);
+    }else if(pageId == "gregorioPageId"){
+        atributesValues = createInfoAtributes(gregorioAtr);
 
-    }else if(objetoStringChar == "zaosPageId"){
-        atributesValues = identifyObj(zaosAtr);
+    }else if(pageId == "zaosPageId"){
+        atributesValues = createInfoAtributes(zaosAtr);
     }
 
 });
