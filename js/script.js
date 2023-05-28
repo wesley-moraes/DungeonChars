@@ -152,19 +152,14 @@ function createInfoAtributes(char){
 
 /*
 function createRelationShip(charRelationship){
-
     if( charRelationship == "drawRelationship" ){
         var typeOfRelation = Object.values(drawRelationship);
-
         for(var i = 0; i < typeOfRelation.length; i++){
-            
             var item = document.createElement("p");
             var itemContent = `- ${Object.keys(drawRelationship)[i]} is: ${Object.values(drawRelationship)[i]}`;
             //console.log(itemContent);
             item.appendChild(document.createTextNode(itemContent));
-
             document.getElementById("relationship-list").appendChild(item);
-            
         };
     };
 };
@@ -188,21 +183,16 @@ function createRelationShip(charRelationship){
 
 /*
 function createFavsMagics(){
-
     var wrapperFavMagics = document.getElementById("content-info-favorite-magics");
     var contentFavMagics = '';
-
     for (const informacao in drawFavMagics){
         if (drawFavMagics.hasOwnProperty(informacao)) {
-
-            
             console.log(`${informacao}: `);
             console.log(`descricacao da magia: ${drawFavMagics[informacao].description}`);
             console.log(`nome da magia: ${drawFavMagics[informacao].name}`);
             console.log(`alt: ${drawFavMagics[informacao].alt}`);
             console.log(`src: ${drawFavMagics[informacao].img}`);
             //Acess each value and key in the object
-        
             contentFavMagics += `
                 <div class="wrapper-magic">
                     <div class="magic-img">
@@ -218,10 +208,8 @@ function createFavsMagics(){
             `
         }
     };
-    
     //Insert the html content
     wrapperFavMagics.innerHTML = contentFavMagics;
-    
 };
 */
 
@@ -322,7 +310,9 @@ document.addEventListener("DOMContentLoaded", function(){
         atributesValues = createInfoAtributes(gregorioAtr);
 
     }else if(pageId == "zaosPageId"){
-        atributesValues = createInfoAtributes(zaosAtr);
+        createInfoAtributes(zaosAtr);
+        createRelationShip(zaosRelationship);
+        createFavsMagics(zaosFavMagics);
     }
 
 });

@@ -323,6 +323,58 @@ body {
   color: rgb(128, 255, 177);
 }
 
+/*Zaos*/
+.zaosPage {
+  background-image: url("../img/zaos-bg-giphy.gif");
+  background-size: cover;
+}
+.zaosPage main {
+  border: 4px solid #1c174d;
+  background-image: linear-gradient(to top, rgba(0, 3, 156, 0.863), rgba(0, 5, 78, 0.199));
+  height: 500px;
+}
+.zaosPage main .content-text {
+  overflow-y: auto;
+  max-height: 330px;
+}
+.zaosPage main .content-text::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(26, 18, 54);
+  border-radius: 30px;
+}
+.zaosPage main .content-text::-webkit-scrollbar-thumb {
+  background-color: rgb(16, 8, 65);
+  border-radius: 30px;
+  border: 1px solid rgb(53, 52, 52);
+  -webkit-transition: opacity 1.2s ease;
+}
+.zaosPage main .content-text::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(5, 20, 224);
+  -webkit-transition: opacity 1.2s ease;
+}
+.zaosPage main .content-text .content-list ul li {
+  border: 1px solid rgb(55, 227, 233);
+  background-color: transparent;
+  transition: all 0.4s;
+}
+.zaosPage main .content-text .content-list ul li:hover {
+  background-color: #047ee2;
+  transition: all 0.4s;
+}
+.zaosPage main .content-text .content-list ul li:hover i {
+  color: #003eb3;
+  transition: all 0.3s;
+}
+.zaosPage main .content-text .content-list ul .select {
+  background-color: rgb(72, 84, 245);
+}
+.zaosPage main .magic-description h2 {
+  color: #00ff6a;
+}
+.zaosPage main .magic-description h2 span {
+  color: rgb(128, 255, 177);
+}
+
 main {
   width: 40%;
   height: 390px;
