@@ -465,22 +465,25 @@ main .content-text .content-list ul li i {
   background-color: rgb(167, 28, 60);
 }
 .mazabelePage main .content-text .content-list ul li {
-  border: 1px solid rgb(34, 255, 34);
+  border: 1px solid #ffa2c4;
+}
+.mazabelePage main .content-text .content-list ul li i {
+  color: #cc1e55;
 }
 .mazabelePage main .content-text .content-list ul li:hover {
-  background-color: #e2f1aa;
+  background-color: #ffb3c8;
 }
 .mazabelePage main .content-text .content-list ul li:hover i {
-  color: #4d4141;
+  color: #fff;
 }
 .mazabelePage main .content-text .content-list ul .select {
-  background-color: rgb(0, 153, 46);
+  background-color: #ffe8f0;
 }
 .mazabelePage main .magic-description h2 {
-  color: #00ff6a;
+  color: #fff;
 }
 .mazabelePage main .magic-description h2 span {
-  color: rgb(128, 255, 177);
+  color: rgb(241, 66, 118);
 }
 
 /*Zaos*/

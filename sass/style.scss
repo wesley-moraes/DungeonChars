@@ -217,9 +217,7 @@ main{
                         }
                     }
                 }
-                
             }
-
         }
 
 
@@ -441,19 +439,21 @@ main{
 
                 ul{
                     li{
-                        border: 1px solid rgb(34, 255, 34);
-
+                        border: 1px solid #ffa2c4;
+                        i{
+                            color: #cc1e55;
+                        }
                         &:hover{
-                            background-color: #e2f1aa;
+                            background-color: #ffb3c8;
 
                             i{
-                                color: #4d4141;
+                                color: #fff;
                             }
                         }
                     }
 
                     .select{
-                        background-color: rgb(0, 153, 46);
+                        background-color: #ffe8f0;
                     }
                 }
 
@@ -462,9 +462,9 @@ main{
 
         .magic-description{
             h2 {
-                color: #00ff6a;
+                color: #fff;
                 span{
-                    color:rgb(128, 255, 177);
+                    color:rgb(241, 66, 118);
                 }
             }
         }
