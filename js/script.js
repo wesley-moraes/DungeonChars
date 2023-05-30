@@ -36,12 +36,12 @@ var zaosAtr = {
 };
 
 var gregorioAtr = {
-    for : "18",
-    dex : "18",
+    for : "15",
+    dex : "8",
     con : "16",
-    int : "8",
+    int : "10",
     wis : "12",
-    cha : "10"
+    cha : "14"
 };
 
 var aephestosAtr = {
@@ -70,10 +70,10 @@ var mazabeleRelationship = {
 };
 
 var gregorioRelationship = {
-    Mazabele : "good! Althught she's quiet, he likes her",
-    Zaos : "friction/good! They usually fight eachother but they like either",
-    Aephestos : "good! They've been travelling together so he considere him as a familiar",
-    Draw : "good! "
+    Mazabele : "Good! Gregorio likes her a lot, even though she is very closed! someone he trusts",
+    Zaos : "Funny! Despite the intrigues and little things, Gregory considers Zaos a lot!",
+    Aephestos : "Good/Neutral: A distant relationship, but a good one! They are good companions, but it is a more distant relationship",
+    Draw : "Great! He thinks Draw is half-orc Gregory"
 };
 
 var aephestosRelationship = {
@@ -160,6 +160,28 @@ var aephestosFavMagics = {
     }
 };
 
+var gregorioFavMagics = {
+    mistyStep : {
+        name : "Misty Step",
+        description : "A short teleport over a considerable distance",
+        img : "../img/gregorioMagics/mistyStep.jpg",
+        alt : "Misty Step Magic"
+    },
+    
+    auraOfProtection : {
+        name : "Aura Of Protection",
+        description : "Protection in area that whoever is close to it has reduced magic damage",
+        img : "../img/gregorioMagics/auraOfProtection.jpg",
+        alt : "Aura Of Protection Magic"
+    },
+
+    divineSmite : {
+        name : "Divine Smite",
+        description : "Strengthens attack against evil creatures! It is an attack blessed by the god (a divine strike)",
+        img : "../img/gregorioMagics/divineSmite.png",
+        alt : "Divine Smite Magic"
+    }
+};
 
 /*
 Functions
@@ -333,7 +355,9 @@ document.addEventListener("DOMContentLoaded", function(){
         createFavsMagics(aephestosFavMagics);
 
     }else if(pageId == "gregorioPageId"){
-        atributesValues = createInfoAtributes(gregorioAtr);
+        createInfoAtributes(gregorioAtr);
+        createRelationShip(gregorioRelationship);
+        createFavsMagics(gregorioFavMagics);
 
     }else if(pageId == "zaosPageId"){
         createInfoAtributes(zaosAtr);
