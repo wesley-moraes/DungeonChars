@@ -23,7 +23,7 @@ var mazabeleAtr = {
     con : "14",
     int : "12",
     wis : "14",
-    cha : "10"
+    cha : "8"
 };
 
 var zaosAtr = {
@@ -63,10 +63,10 @@ var drawRelationship = {
 };
 
 var mazabeleRelationship = {
-    Gregorio : "neutral",
-    Zaos : "neutral",
-    Aephestos : "good",
-    Draw : "neutral"
+    Gregorio : "neutral/good! He seems to be everyone's father",
+    Zaos : "neutral! Enjoy watching his masks",
+    Aephestos : "good! One of the few who can talk more",
+    Draw : "neutral! Although he was a snitch, the relationship is good enough"
 };
 
 var gregorioRelationship = {
@@ -84,10 +84,10 @@ var aephestosRelationship = {
 };
 
 var zaosRelationship = {
-    Mazabele : "neutral",
-    Aephestos : "good",
-    Gregorio : "friction",
-    Draw : "neutral"
+    Mazabele : "neutral! Believes she's just a bush woman with powerful archery skills",
+    Aephestos : "good! They like to talk about spells and how to always amplify their powers. They almost never conflict.",
+    Gregorio : "friction! Likes to gossip with Gregorio because he is easily led into chaos, which he finds amusing.",
+    Draw : "neutral/bad! Draw doesn't like chaos, so sometimes he's boring because chaos is necessary."
 };
 
 /*Favourites magics*/
@@ -115,25 +115,25 @@ var drawFavMagics = {
 };
 
 var mazabeleFavMagics = {
-    cureWounds : {
-        name : "Cure Wounds",
-        description : "This is the Draw's favourite magic! He can heal all the person who needs be healed",
-        img : "../img/drawMagics/cureWounds.png",
-        alt : "Cure Wounds Magic"
-    },
-    
     huntersMark : {
         name : "Hunter's Mark",
-        description : "It can mark the enemy",
-        img : "../img/drawMagics/banishment.png",
-        alt : "Banishment Magic"
+        description : "You choose a creature you can see within range and mystically mark it as your quarry",
+        img : "../img/mazabeleMagics/huntersMark.png",
+        alt : "Hunter's Mark Magic"
+    },
+    
+    Alarm : {
+        name : "Alarm",
+        description : "You set an alarm against unwanted intrusion.",
+        img : "../img/mazabeleMagics/alarm.png",
+        alt : "Alarm Magic"
     },
 
-    sanctuary : {
-        name : "Sanctuary",
-        description : "This is the most powerfull magic that Draw has! He can sent anyone to another dimension",
-        img : "../img/drawMagics/sanctuary.png",
-        alt : "Sanctuary Magic"
+    SpeakPlants  : {
+        name : "Speak with Plants",
+        description : "You imbue plants within 30 feet of you with limited sentience and animation, giving them the ability to communicate with you and follow your simple commands",
+        img : "../img/mazabeleMagics/speakPlants.png",
+        alt : "Speak with Plants Magic"
     }
 };
 
@@ -180,6 +180,29 @@ var gregorioFavMagics = {
         description : "Strengthens attack against evil creatures! It is an attack blessed by the god (a divine strike)",
         img : "../img/gregorioMagics/divineSmite.png",
         alt : "Divine Smite Magic"
+    }
+};
+
+var zaosFavMagics = {
+    message : {
+        name : "Message",
+        description : "You point your finger toward a creature within range and whisper a message.",
+        img : "../img/zaosMagics/message.png",
+        alt : "Message Magic"
+    },
+    
+    fireBall : {
+        name : "Fire Ball",
+        description : "A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame",
+        img : "../img/zaosMagics/fireBall.png",
+        alt : "Fire Ball Magic"
+    },
+
+    counterspell : {
+        name : "Counterspell",
+        description : "Attempt to interrupt a creature in the process of casting a spell.",
+        img : "../img/zaosMagics/counterspell.png",
+        alt : "Counterspell Magic"
     }
 };
 
