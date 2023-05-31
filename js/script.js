@@ -206,6 +206,7 @@ var zaosFavMagics = {
     }
 };
 
+
 /*
 Functions
 */
@@ -320,8 +321,7 @@ function createFavsMagics(charFavsMagics){
     
 };
 
-document.addEventListener("DOMContentLoaded", function(){
-
+function workMenuList(){
     //default
     document.getElementsByClassName("content-info-atributes")[0].style.display = "block";
     document.getElementsByClassName("content-info-relationship")[0].style.display = "none";
@@ -357,35 +357,64 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById("li-atributes").classList.remove("select");
         document.getElementById("li-relationship").classList.remove("select");
     });
+}
+
+document.addEventListener("DOMContentLoaded", function(){
 
     //Create of Char Page
     var charsPage = document.getElementsByTagName("body");
     var pageId = charsPage[0].id;
 
     if(pageId == "drawPageId"){
+        workMenuList();
         createInfoAtributes(drawAtr);
         createRelationShip(drawRelationship);
         createFavsMagics(drawFavMagics);
 
     }else if(pageId == "mazabelePageId"){
+        workMenuList();
         atributesValues = createInfoAtributes(mazabeleAtr);
         createRelationShip(mazabeleRelationship);
         createFavsMagics(mazabeleFavMagics);
 
     }else if(pageId == "aephestosPageId"){
+        workMenuList();
         createInfoAtributes(aephestosAtr);
         createRelationShip(aephestosRelationship);
         createFavsMagics(aephestosFavMagics);
 
     }else if(pageId == "gregorioPageId"){
+        workMenuList();
         createInfoAtributes(gregorioAtr);
         createRelationShip(gregorioRelationship);
         createFavsMagics(gregorioFavMagics);
 
     }else if(pageId == "zaosPageId"){
+        workMenuList();
         createInfoAtributes(zaosAtr);
         createRelationShip(zaosRelationship);
         createFavsMagics(zaosFavMagics);
     }
+
+    /*Menu*/
+    var nav = document.getElementById("nav-menu");
+    var showMenu = document.getElementById("showMenu");
+    var hideMenu = document.getElementById("hideMenu");
+    showMenu.addEventListener("click", function () {
+        nav.classList.add("show");
+        console.log("tranquilo");
+    });
+
+    hideMenu.addEventListener("click", function () {
+    nav.classList.remove("show");
+    });
+
+    document.addEventListener('mouseup', function(e) {
+        var container = document.getElementById('nav-menu');
+        if (!container.contains(e.target)) {
+            nav.classList.remove("show");
+        }
+    });
+
 
 });

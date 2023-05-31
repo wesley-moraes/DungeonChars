@@ -159,6 +159,111 @@ body {
   height: 100vh;
 }
 
+/*Menu*/
+.btn-menu {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  bottom: 0px;
+  left: 20px;
+  background-color: rgba(104, 105, 105, 0.662745098);
+  overflow: hidden;
+  width: 46px;
+  height: 48px;
+  border-radius: 10px;
+  transition: 0.6s;
+}
+.btn-menu i {
+  transition: 0.6s;
+}
+.btn-menu #showMenu {
+  font-size: 43px;
+  margin-left: 4px;
+  margin-top: 2px;
+}
+.btn-menu:hover {
+  background-color: rgba(68, 148, 148, 0.662745098);
+  transition: 0.6s;
+}
+.btn-menu:hover i {
+  color: #fff;
+  transition: 0.6s;
+}
+
+#nav-menu {
+  position: absolute;
+  top: 0px;
+  left: -255px;
+  bottom: 0px;
+  width: 250px;
+  background-color: rgba(100, 95, 95, 0.596);
+  box-shadow: 0px 0px 10px black;
+  transition: left 0.5s linear;
+}
+#nav-menu #hideMenu {
+  float: left;
+  width: 100%;
+  font-size: 30px;
+  color: darkgrey;
+  transition: 0.6s;
+}
+#nav-menu #hideMenu i {
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+#nav-menu #hideMenu:hover {
+  color: rgb(163, 44, 44);
+  transition: 0.6s;
+}
+#nav-menu .wrapper-title-menu {
+  float: left;
+  width: 100%;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+#nav-menu .wrapper-title-menu .icon-nav-menu {
+  float: left;
+  margin-top: 10px;
+  width: 20px;
+}
+#nav-menu .wrapper-title-menu .icon-nav-menu i {
+  font-size: 16px;
+  color: #fff;
+}
+#nav-menu .wrapper-title-menu p {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-family: westbourne-serif-regular;
+  color: #fff;
+  float: left;
+  font-weight: bold;
+}
+#nav-menu ul {
+  margin: 10px 10px 0 15px;
+}
+#nav-menu ul li {
+  margin-bottom: 5px;
+}
+#nav-menu ul li a {
+  font-size: 20px;
+  margin-left: 20px;
+  font-family: westbourne-serif-regular;
+  color: #fff;
+  margin: 10px;
+  text-decoration: none;
+  transition: 0.6s;
+}
+#nav-menu ul li a:hover {
+  color: rgb(255, 93, 131);
+  transition: 0.6s;
+}
+
+#nav-menu.show {
+  left: 0px;
+}
+
 main {
   width: 40%;
   height: 390px;
@@ -206,7 +311,7 @@ main .content-text {
   left: 50%;
   position: relative;
   transform: translateX(-50%);
-  max-height: 230px;
+  height: 230px;
   overflow-y: scroll;
 }
 main .content-text::-webkit-scrollbar {
@@ -249,11 +354,18 @@ main .content-text p {
   color: #fff;
   transition: 0.3s;
 }
+main .content-text .charList {
+  text-align: center;
+}
+main .content-text .charList p {
+  font-size: 26px;
+}
 main .content-text #CharsList li {
   font-family: westbourne-serif-regular;
-  font-size: 25px;
+  text-align: center;
 }
 main .content-text #CharsList li a {
+  font-size: 29px;
   color: lightblue;
   transition: all 0.4s;
 }
@@ -287,54 +399,54 @@ main .content-text .content-list ul li i {
 .allCharPages main {
   height: 500px;
 }
-.allCharPages .content-text {
+.allCharPages main .content-text {
   overflow-y: auto;
-  max-height: 330px;
+  height: 330px;
 }
-.allCharPages .content-text::-webkit-scrollbar {
+.allCharPages main .content-text::-webkit-scrollbar {
   width: 10px;
   border-radius: 30px;
 }
-.allCharPages .content-text::-webkit-scrollbar-thumb {
+.allCharPages main .content-text::-webkit-scrollbar-thumb {
   border-radius: 30px;
 }
-.allCharPages .content-text .content-list ul li {
+.allCharPages main .content-text .content-list ul li {
   background-color: transparent;
   transition: all 0.4s;
 }
-.allCharPages .content-text .content-list ul li:hover {
+.allCharPages main .content-text .content-list ul li:hover {
   transition: all 0.4s;
 }
-.allCharPages .content-text .content-list ul li:hover i {
+.allCharPages main .content-text .content-list ul li:hover i {
   transition: all 0.3s;
 }
-.allCharPages .content-text div {
+.allCharPages main .content-text div {
   border-bottom: 1px solid transparent;
   margin-bottom: 10px;
 }
-.allCharPages .content-text > div {
+.allCharPages main .content-text > div {
   width: 100%;
   margin: 0;
   margin-bottom: 15px;
   padding-right: 5px;
 }
-.allCharPages .content-text .content-info-atributes div {
+.allCharPages main .content-text .content-info-atributes div {
   float: left;
   width: 100%;
   margin-bottom: 10px;
 }
-.allCharPages .content-text .content-info-atributes div p {
+.allCharPages main .content-text .content-info-atributes div p {
   float: left;
 }
-.allCharPages .content-text .content-info-atributes div p:nth-child(1) {
+.allCharPages main .content-text .content-info-atributes div p:nth-child(1) {
   font-size: 34px;
 }
-.allCharPages .content-text .content-info-atributes div p:nth-child(2) {
+.allCharPages main .content-text .content-info-atributes div p:nth-child(2) {
   color: #fff;
   font-size: 50px;
   margin-left: 12px;
 }
-.allCharPages .content-text .relationship-list p {
+.allCharPages main .content-text .relationship-list p {
   margin-bottom: 10px;
 }
 .allCharPages .content-info-favorite-magics {
