@@ -56,59 +56,59 @@ var aephestosAtr = {
 
 /*The relationships between the characters*/
 var drawRelationship = {
-    Gregorio : "good! Because he can trust him and ask anythink! Gregs is a good person!",
-    Zaos : "bad! He's a caos agent and Draw don't like. However, they live ok",
-    Aephestos : "good! They usually talk about life, magic and the reason os all this!",
-    Mazabele : "neutral! She's so quiet... "
+    Gregorio : "Good! Draw can trust him and ask anything. Gregorio is a good person!",
+    Zaos : "Bad! He's an agent of chaos, which Draw doesn't like. However, they manage to live together peacefully.",
+    Aephestos : "Good! They often have conversations about life, magic, and the meaning of it all!",
+    Mazabele : "Neutral! She's very quiet..."
 };
 
 var mazabeleRelationship = {
-    Gregorio : "neutral/good! He seems to be everyone's father",
-    Zaos : "neutral! Enjoy watching his masks",
-    Aephestos : "good! One of the few who can talk more",
-    Draw : "neutral! Although he was a snitch, the relationship is good enough"
+    Gregorio : "Neutral/good! He appears to be a paternal figure to everyone.",
+    Zaos : "Neutral! He takes pleasure in observing his masks.",
+    Aephestos : "Good! He is one of the few with whom one can have deeper conversations.",
+    Draw : "Neutral! Despite some past issues, their relationship is now good enough."
 };
 
 var gregorioRelationship = {
-    Mazabele : "Good! Gregorio likes her a lot, even though she is very closed! someone he trusts",
+    Mazabele : "Good! Gregorio likes her a lot, even though she is very closed! She's someone he trusts",
     Zaos : "Funny! Despite the intrigues and little things, Gregory considers Zaos a lot!",
     Aephestos : "Good/Neutral: A distant relationship, but a good one! They are good companions, but it is a more distant relationship",
     Draw : "Great! He thinks Draw is half-orc Gregory"
 };
 
 var aephestosRelationship = {
-    Mazabele : "neutral/good! He knews that he wasn't seem as a friend because of his blood, but everything chanded with time",
-    Zaos : "good! Aephestos released that he has never considered him as bottom because He hasn't pure elf blood! But considered equal",
-    Gregorio : "good! As a half-elf Apehestos learns a lot about the human side from him",
-    Draw : "good! See his beliefs as he has, and respects this"
+    Mazabele : "Neutral/good! At first, she may not have seen Aephestos as a friend due to his bloodline, but over time, everything changed.",
+    Zaos : "Good! Aephestos realized that he never considered Zaos inferior because of his mixed blood. Instead, he treated him as an equal.",
+    Gregorio : "Good! As a half-elf, Aephestos learns a lot about the human side from him.",
+    Draw : "Good! Draw shares similar beliefs and respects Aephestos for who he is."
 };
 
 var zaosRelationship = {
-    Mazabele : "neutral! Believes she's just a bush woman with powerful archery skills",
-    Aephestos : "good! They like to talk about spells and how to always amplify their powers. They almost never conflict.",
-    Gregorio : "friction! Likes to gossip with Gregorio because he is easily led into chaos, which he finds amusing.",
-    Draw : "neutral/bad! Draw doesn't like chaos, so sometimes he's boring because chaos is necessary."
+    Mazabele : "Neutral! She sees herself as a simple woman skilled in archery.",
+    Aephestos : "Good! They enjoy discussing spells and how to enhance their powers. They rarely clash.",
+    Gregorio : "A source of friction! Zaos enjoys gossiping with Gregorio because he easily gets caught up in chaos, which Zaos finds amusing.",
+    Draw : "Neutral/bad! Draw dislikes chaos, so at times, he can be perceived as dull because chaos is deemed necessary."
 };
 
 /*Favourites magics*/
 var drawFavMagics = {
     cureWounds : {
         name : "Cure Wounds",
-        description : "This is the Draw's favourite magic! He can heal all the person who needs be healed",
+        description : "This is Draw's favorite magic! He has the ability to heal anyone in need of healing.",
         img : "../img/drawMagics/cureWounds.png",
         alt : "Cure Wounds Magic"
     },
     
     banishment : {
         name : "Banishment",
-        description : "This is the most powerfull magic that Draw has! He can sent anyone to another dimension",
+        description : "This is the most powerful magic that Draw possesses! He has the ability to send anyone to another dimension.",
         img : "../img/drawMagics/banishment.png",
         alt : "Banishment Magic"
     },
 
     sanctuary : {
         name : "Sanctuary",
-        description : "This is the most powerfull magic that Draw has! He can sent anyone to another dimension",
+        description : "This is the most powerful magic that Draw has! He can send anyone to another dimension.",
         img : "../img/drawMagics/sanctuary.png",
         alt : "Sanctuary Magic"
     }
@@ -117,21 +117,21 @@ var drawFavMagics = {
 var mazabeleFavMagics = {
     huntersMark : {
         name : "Hunter's Mark",
-        description : "You choose a creature you can see within range and mystically mark it as your quarry",
+        description : "She chooses a creature she can see within range and mystically marks it as her quarry.",
         img : "../img/mazabeleMagics/huntersMark.png",
         alt : "Hunter's Mark Magic"
     },
     
     Alarm : {
         name : "Alarm",
-        description : "You set an alarm against unwanted intrusion.",
+        description : "She sets an alarm against unwanted intrusion.",
         img : "../img/mazabeleMagics/alarm.png",
         alt : "Alarm Magic"
     },
 
     SpeakPlants  : {
         name : "Speak with Plants",
-        description : "You imbue plants within 30 feet of you with limited sentience and animation, giving them the ability to communicate with you and follow your simple commands",
+        description : "She imbues plants with limited sentience and animation, giving them the ability to communicate with her and follow simple commands.",
         img : "../img/mazabeleMagics/speakPlants.png",
         alt : "Speak with Plants Magic"
     }
@@ -140,21 +140,21 @@ var mazabeleFavMagics = {
 var aephestosFavMagics = {
     tidalWave : {
         name : "Tidal Wave",
-        description : "Manipulating water he can create a strong wave that falls violently",
+        description : "By manipulating water, Aephestos can create a powerful and forceful wave that crashes down violently.",
         img : "../img/aephestosMagics/tidalWave.jpg",
         alt : "Tidal Wave Magic"
     },
     
     Moonbeam : {
         name : "Moonbeam",
-        description : "A tower of pale silver light that engulfs enemies in ghostly flames",
+        description : "He can conjure a tower of pale silver light that engulfs enemies in ghostly flames.",
         img : "../img/aephestosMagics/moonBeam.jpg",
         alt : "Banishment Magic"
     },
 
     guiddingBold : {
         name : "Guiding Bolt",
-        description : "A ray of spiritual energy that highlights the enemy",
+        description : "Aephestos can also unleash a ray of spiritual energy that illuminates and targets enemies.",
         img : "../img/aephestosMagics/guidingBolt.jpg",
         alt : "Sanctuary Magic"
     }
