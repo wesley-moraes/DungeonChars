@@ -1,6 +1,6 @@
 # DungeonChars
 
-## [Build:](https://wesley-moraes.github.io/DungeonChars/)
+## Build: [Dungeon Chars](https://wesley-moraes.github.io/DungeonChars/)
 
 Um projeto simples para relembrar as esruturas básicas de HTML, CSS e JS!
 
