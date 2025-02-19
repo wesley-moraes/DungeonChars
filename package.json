@@ -9,6 +9,8 @@
   "author": "Wesley Moraes",
   "license": "ISC",
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "live-server": "^1.2.2",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.85.0"
   }
 }
